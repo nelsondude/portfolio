@@ -8,16 +8,18 @@ export default class Navbar extends Component {
     collapse: true
   };
 
-  updateDimensions = () => {
-    console.log(window.innerWidth, window.innerHeight);
+  updateCollapse = () => {
+    if (window.innerWidth > 600 && !this.state.collapse) {
+      this.setState({collapse: true})
+    }
   };
 
   componentDidMount = () => {
-    window.addEventListener("resize", this.updateDimensions);
+    window.addEventListener("resize", this.updateCollapse);
   };
 
   componentWillUnmount = () => {
-    window.removeEventListener("resize", this.updateDimensions);
+    window.removeEventListener("resize", this.updateCollapse);
   };
 
   render() {

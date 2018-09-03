@@ -11,9 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <Layout>
-          <h1>Layout</h1>
           <Switch>
-            <Route path={'/home'} exact component={Home} />
+            <Route path={'/home'} component={Home} />
             <Route path={'/about'} component={About} />
             <Route path={'/portfolio'} component={Portfolio} />
             <Redirect to={'/home'} />
