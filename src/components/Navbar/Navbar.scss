@@ -1,0 +1,65 @@
+$breakpoint: 600px;
+
+.Navbar {
+  height: 52px;
+  overflow: hidden;
+  transition: height .3s;
+
+  .icon {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white !important;
+    cursor: pointer;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  a.active {
+    background-color: #4CAF50;
+  }
+  @media screen and (max-width: $breakpoint) {
+    li {
+      float: none;
+      display: block;
+      a {
+        text-align: left;
+      }
+    }
+    .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    #toggle {
+      float: right;
+      .icon {
+        display: block
+      }
+    }
+    &.navcollapse {
+      height: 104px;
+    }
+  }
+}
