@@ -1,10 +1,15 @@
 .Header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   .purple_bar {
-    height: 5px;
+    margin: 15px;
+    height: 15px;
     width: 100px;
     background-color: purple;
+    flex-grow: 1;
+  }
+  .header-title {
+    margin: 0 80px;
   }
 }

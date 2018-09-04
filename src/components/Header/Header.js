@@ -6,7 +6,7 @@ const header = (props) => {
   return (
     <div className={'Header'}>
       <div className={'purple_bar'}/>
-      <span className="text-center" style={{fontSize: props.fontSize}}>{props.msg}</span>
+      <span className="text-center header-title" style={{fontSize: props.fontSize}}>{props.msg}</span>
       <div className={'purple_bar'}/>
     </div>
   )
