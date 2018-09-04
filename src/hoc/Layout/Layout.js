@@ -6,9 +6,7 @@ import {Buffer} from "../../components";
 const layout = (props) => {
   return (
     <Fragment>
-      <Buffer/>
-      <Navbar/>
-      <div className={'container'}>
+      <div>
         {props.children}
       </div>
     </Fragment>
