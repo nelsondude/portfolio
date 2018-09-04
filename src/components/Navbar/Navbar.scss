@@ -63,3 +63,8 @@ $breakpoint: 600px;
   top: 0;
   width: 100%;
 }
+
+// Affects content class in the Home Container
+.sticky + .content {
+  padding-top: 52px;
+}

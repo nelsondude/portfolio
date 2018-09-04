@@ -40,7 +40,6 @@ export default class Navbar extends Component {
   };
 
   render() {
-    console.log('navbar classes changed');
     const links = ['home', 'about'];
     let navClasses = [...this.state.navClasses];
     if (!this.state.collapse) {

@@ -11,9 +11,12 @@ const home = () => (
   <div className={'Home'}>
     <Banner/>
     <Navbar/>
-    <Portfolio/>
-    <About/>
-    <Footer />
+    {/*content class necessary so that Navbar can add padding when it changes position*/}
+    <div className={'content'}>
+      <Portfolio/>
+      <About/>
+      <Footer/>
+    </div>
   </div>
 );
 
