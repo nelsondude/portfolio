@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
 import './Navbar.css';
 
 
@@ -40,7 +39,6 @@ export default class Navbar extends Component {
   };
 
   render() {
-    const links = ['home', 'about'];
     let navClasses = [...this.state.navClasses];
     if (!this.state.collapse) {
       navClasses.push('navcollapse')
@@ -48,10 +46,10 @@ export default class Navbar extends Component {
     return (
       <nav className={navClasses.join(' ')}>
         <ul>
-          {links.map((link, i) => {
+          {this.props.links.map((link, i) => {
             return (
               <li key={i}>
-                <Link to={link}>{link}</Link>
+                <a onClick={() => this.props.goToSection(link)}>{link}</a>
               </li>
             )
           })}
