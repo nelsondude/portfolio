@@ -4,7 +4,7 @@ import './Footer.css';
 
 const footer = () => (
   <footer className={'Footer'}>
-    Here is the footer...
+    © 2018 Alex Nelson. Made in the USA
   </footer>
 );
 
