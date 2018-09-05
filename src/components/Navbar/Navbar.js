@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './Navbar.css';
+import {scroller} from "react-scroll";
+import {links} from "globals/constants";
 
 
 export default class Navbar extends Component {
@@ -38,6 +40,16 @@ export default class Navbar extends Component {
     window.removeEventListener("scroll", this.handleScroll);
   };
 
+
+  handleGoToSection = (section_name) => {
+    scroller.scrollTo(section_name, {
+      duration: () => {return 500;},
+      delay: 100,
+      smooth: true,
+      offset: -100
+    })
+  };
+
   render() {
     let navClasses = [...this.state.navClasses];
     let height = '52px';
@@ -48,12 +60,12 @@ export default class Navbar extends Component {
     return (
       <nav className={navClasses.join(' ')} style={{height: height}}>
         <ul>
-          {this.props.links.map((link, i) => {
+          {links.map((link, i) => {
             return (
               <li key={i}>
                 <a onClick={() => {
                   this.setState({collapse: true});
-                  this.props.goToSection(link);
+                  this.handleGoToSection(link);
                 }}>{link}</a>
               </li>
             )

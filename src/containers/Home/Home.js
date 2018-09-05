@@ -10,18 +10,6 @@ import Contact from "components/Contact/Contact";
 import {Element, scroller} from 'react-scroll'
 
 class Home extends Component {
-  state = {
-    links: ['home', 'portfolio', 'about', 'contact']
-  };
-
-  handleGoToSection = (section_name) => {
-    scroller.scrollTo(section_name, {
-      duration: () => {return 500;},
-      delay: 100,
-      smooth: true,
-      offset: -100
-    })
-  };
 
   render() {
     return (
@@ -29,7 +17,6 @@ class Home extends Component {
         <Element name="home">
           <Banner/>
         </Element>
-        <Navbar goToSection={this.handleGoToSection.bind(this)} links={this.state.links}/>
         {/*content class necessary so that Navbar can add padding when it changes position*/}
         <div className={'content'}>
           <Element name="portfolio">
