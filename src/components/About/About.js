@@ -7,7 +7,7 @@ const about = () => {
 
   return (
     <div className={'About'}>
-      <img id={'collage'} src={collage}/>
+      <img id={'collage'} src={collage} alt=""/>
 
       <div className={'mask'}/>
       <div className={'about-content'}>
