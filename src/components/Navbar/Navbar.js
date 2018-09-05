@@ -20,7 +20,7 @@ export default class Navbar extends Component {
     const index = this.state.navClasses.indexOf("sticky");
     if (window.pageYOffset >= this.state.offsetTop && index === -1) {
       this.setState({navClasses: [...this.state.navClasses, "sticky"]});
-    } else if ( window.pageYOffset < this.state.offsetTop && index >= 0) {
+    } else if (window.pageYOffset < this.state.offsetTop && index >= 0) {
       const classes = [...this.state.navClasses];
       classes.splice(index, 1);
       this.setState({navClasses: classes});
@@ -40,16 +40,21 @@ export default class Navbar extends Component {
 
   render() {
     let navClasses = [...this.state.navClasses];
+    let height = '52px';
     if (!this.state.collapse) {
-      navClasses.push('navcollapse')
+      height = `${this.props.links.length * 52}px`;
     }
+
     return (
-      <nav className={navClasses.join(' ')}>
+      <nav className={navClasses.join(' ')} style={{height: height}}>
         <ul>
           {this.props.links.map((link, i) => {
             return (
               <li key={i}>
-                <a onClick={() => this.props.goToSection(link)}>{link}</a>
+                <a onClick={() => {
+                  this.setState({collapse: true});
+                  this.props.goToSection(link);
+                }}>{link}</a>
               </li>
             )
           })}
