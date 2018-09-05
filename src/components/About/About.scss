@@ -1,6 +1,8 @@
 .About {
   position: relative;
   text-align: center;
+  max-height: 600px;
+  overflow: hidden;
   img {
     width: 100%;
   }
@@ -10,6 +12,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 20%;
   }
   .mask {
     position: absolute;
@@ -18,5 +21,8 @@
     height: 100%;
     background: purple;
     opacity: 0.45;
+  }
+  h1 {
+    text-transform: uppercase;
   }
 }
