@@ -5,17 +5,18 @@ import Navbar from "components/Navbar/Navbar";
 import Portfolio from "components/Portfolio/Portfolio";
 import About from "components/About/About";
 import Footer from "components/Footer/Footer";
+import Contact from "components/Contact/Contact";
 
-import {Link, Element, Events, animateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
+import {Element, scroller} from 'react-scroll'
 
 class Home extends Component {
   state = {
-    links: ['home', 'portfolio', 'about', 'skills', 'contact']
+    links: ['home', 'portfolio', 'about', 'contact']
   };
 
   handleGoToSection = (section_name) => {
     scroller.scrollTo(section_name, {
-      duration: 500,
+      duration: () => {return 500;},
       delay: 100,
       smooth: true,
       offset: -100
@@ -36,6 +37,9 @@ class Home extends Component {
           </Element>
           <Element name="about">
             <About/>
+          </Element>
+          <Element name="contact">
+            <Contact />
           </Element>
           <Element name="footer">
             <Footer/>
