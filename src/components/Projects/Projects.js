@@ -4,13 +4,11 @@ import './Projects.css';
 
 
 const projects = (props) => {
-
   return (
     <div className={'Projects'}>
-      <Project/>
-      <Project/>
-      <Project/>
-      <Project/>
+      {props.projects.map((project, i) => {
+        return <Project key={i} {...project}/>
+      })}
     </div>
   )
 };

@@ -3,18 +3,13 @@ import './Project.css';
 import Header from "../../Header/Header";
 
 
-const project = () => {
-
+const project = (props) => {
   return (
     <div className={'Project'}>
-      <Header fontSize={'40px'} msg={'SayNPlay'}/>
-      <p><a href="http://chess.alexnelson.me">chess.alexnelson.me</a></p>
+      <Header fontSize={'40px'} msg={props.header}/>
+      <p><a href={props.link}>{props.link}</a></p>
       <hr/>
-      <p>As a personal project, I created SayNPlay to play real-time
-        3D chess with other players. There is a chess AI you can
-        play as well</p>
-      <img className={'img-fluid'} src="https://www.w3schools.com/w3css/img_lights.jpg" alt=""/>
-
+      <p>{props.description}</p>
     </div>
   )
 };
