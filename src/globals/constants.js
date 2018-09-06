@@ -1,1 +1,1 @@
-export const links = ['portfolio', 'about', 'contact'];
+export const links = ['contact', 'about', 'portfolio'];
