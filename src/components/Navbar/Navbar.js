@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './Navbar.css';
 import {scroller} from "react-scroll";
 import {links} from "globals/constants";
+import profile from 'assets/profile_clean.png';
 
 
 export default class Navbar extends Component {
@@ -42,6 +43,7 @@ export default class Navbar extends Component {
 
 
   handleGoToSection = (section_name) => {
+    this.setState({collapse: true});
     scroller.scrollTo(section_name, {
       duration: () => {return 500;},
       delay: 100,
@@ -52,21 +54,21 @@ export default class Navbar extends Component {
 
   render() {
     let navClasses = [...this.state.navClasses];
-    let height = '52px';
-    if (!this.state.collapse) {
-      height = `${this.props.links.length * 52}px`;
-    }
+    // let height = '52px';
+    // if (!this.state.collapse) {
+    //   height = `${this.props.links.length * 52}px`;
+    // }
 
     return (
-      <nav className={navClasses.join(' ')} style={{height: height}}>
+      <nav className={navClasses.join(' ')}>
         <ul>
+          <li className={'home-brand'} onClick={() => this.handleGoToSection('home')}>
+            <img src={profile} alt=""/>
+          </li>
           {links.map((link, i) => {
             return (
-              <li key={i}>
-                <a onClick={() => {
-                  this.setState({collapse: true});
-                  this.handleGoToSection(link);
-                }}>{link}</a>
+              <li key={i} onClick={() => this.handleGoToSection(link)}>
+                {link}
               </li>
             )
           })}

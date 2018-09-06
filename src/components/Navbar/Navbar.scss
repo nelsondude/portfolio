@@ -1,10 +1,11 @@
 $breakpoint: 600px;
+$height: 160px;
 
 .Navbar {
-  height: 52px;
+  height: $height;
   overflow: hidden;
-  transition: height .3s;
-
+  transition: all .3s;
+  padding: 0 60px;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -14,26 +15,29 @@ $breakpoint: 600px;
     display: none;
   }
 
+  .home-brand {
+    float: left;
+    img {
+      border-radius: 100%;
+      height: $height * 3 / 4;
+    }
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
   }
 
   li {
-    float: left;
-    a {
-      display: block;
-      color: white !important;
+    line-height: $height;
+    float: right;
+    padding: 0 16px;
+    font-size: 28px;
+    text-transform: uppercase;
+    &:hover {
       cursor: pointer;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      &:hover {
-        background-color: #111;
-      }
     }
   }
 
@@ -68,6 +72,8 @@ $breakpoint: 600px;
   top: 0;
   width: 100%;
   z-index: 1;
+  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
+  transition: background 1s;
 }
 
 // Affects content class in the Home Container

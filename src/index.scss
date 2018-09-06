@@ -1,16 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lora', serif !important;
+  font-family: 'Roboto', sans-serif !important;
   color: white;
   background: url("~assets/clouds.jpg") no-repeat fixed right top;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-}
 
 .highlight {
   color: #E73C7E;
