@@ -20,6 +20,7 @@ $height: 160px;
     img {
       border-radius: 100%;
       height: $height * 3 / 4;
+      transition: all 1s;
     }
   }
 
@@ -74,6 +75,9 @@ $height: 160px;
   z-index: 1;
   background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   transition: background 1s;
+  img {
+    transform: rotate(45deg);
+  }
 }
 
 // Affects content class in the Home Container
