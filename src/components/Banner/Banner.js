@@ -8,7 +8,7 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 const banner = () => (
   <div className={'Banner'}>
     <div className="banner-content">
-      <h1 className="text-center" style={{fontSize: '100px'}}>Alex Nelson</h1>
+      <h1 className="text-center banner-title">Alexander Nelson</h1>
       <Buffer height={'40px'}/>
       <SocialIcons />
       <Buffer height={'80px'}/>
