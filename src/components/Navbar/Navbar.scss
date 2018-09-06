@@ -5,6 +5,11 @@ $breakpoint: 600px;
   overflow: hidden;
   transition: height .3s;
 
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+
   .icon {
     display: none;
   }
