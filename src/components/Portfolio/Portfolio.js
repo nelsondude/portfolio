@@ -1,22 +1,25 @@
 import React from 'react';
 import './Portfolio.css';
 import Header from "../Header/Header";
-import Projects from "../Projects/Projects";
+import Projects from "./Projects/Projects";
+
+
 
 
 const portfolio = () => {
   const projects = [
     {
-      header: 'Header',
-      link: 'www.google.com',
-      description: 'Here is a description',
-      images: ['img 1', 'img 2']
+      header: 'SayNPlay',
+      link: 'chess.alexnelson.me',
+      description: `As a personal project, I created SayNPlay to play real-time
+                    3D chess with other players. There is a chess AI you can play as well`,
+      images: ['chess1.png']
     },
     {
-      header: 'Header',
-      link: 'www.google.com',
+      header: 'TipsyApp',
+      link: 'www.tipsyapp.co',
       description: 'Here is a description',
-      images: ['img 1', 'img 2']
+      images: ['tipsy1.png', 'tipsy2.png']
     },
     {
       header: 'Header',
