@@ -1,6 +1,11 @@
-$breakpoint: 600px;
+$breakpoint2: 600px;
+$breakpoint1: 800px;
 $height: 160px;
+$short-height: 100px;
 $brand-rotate: 30deg;
+$gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
+
+
 
 .Navbar {
   height: $height;
@@ -36,29 +41,40 @@ $brand-rotate: 30deg;
   }
 
   li {
+    transition: all .2s;
     line-height: $height;
     float: right;
-    padding: 0 16px;
     font-size: 28px;
     text-transform: uppercase;
     &:hover {
       cursor: pointer;
     }
   }
+  .link {
+    padding: 0 16px;
+  }
 
-  @media screen and (max-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint1) {
     li {
-      float: none;
-      display: block;
-      a {
-        text-align: left;
-      }
+      font-size: 20px;
     }
-    .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    .home-brand img {
+      height: $height / 2;
+    }
+  }
 
+  @media screen and (max-width: $breakpoint2) {
+    top: 0;
+    bottom: unset;
+    padding: 0 30px;
+    background: transparent !important;
+    height: $short-height;
+    position: fixed;
+    li {
+      line-height: $short-height;
+    }
+    .link {
+      display: none;
     }
     #toggle {
       float: right;
@@ -77,11 +93,11 @@ $brand-rotate: 30deg;
   top: 0;
   width: 100%;
   z-index: 1;
-  background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
+  background: $gradient;
   transition: background 1s;
-  img {
-    transform: rotate($brand-rotate);
-  }
+  //img {
+  //  transform: rotate($brand-rotate);
+  //}
 }
 
 // Affects content class in the Home Container

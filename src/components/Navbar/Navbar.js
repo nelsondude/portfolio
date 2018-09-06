@@ -67,7 +67,7 @@ export default class Navbar extends Component {
           </li>
           {links.map((link, i) => {
             return (
-              <li key={i} onClick={() => this.handleGoToSection(link)}>
+              <li className={'link'} key={i} onClick={() => this.handleGoToSection(link)}>
                 {link}
               </li>
             )
