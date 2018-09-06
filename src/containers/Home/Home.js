@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import './Home.css';
 import Banner from "components/Banner/Banner";
-import Navbar from "components/Navbar/Navbar";
 import Portfolio from "components/Portfolio/Portfolio";
 import About from "components/About/About";
 import Footer from "components/Footer/Footer";
 import Contact from "components/Contact/Contact";
 
-import {Element, scroller} from 'react-scroll'
+import {Element} from 'react-scroll'
 
 class Home extends Component {
 
