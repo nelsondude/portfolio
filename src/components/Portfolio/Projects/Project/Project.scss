@@ -1,12 +1,24 @@
 .Project {
   text-align: center;
   padding: 50px 0;
-  hr {
-    border-top: 1px solid white;
+  letter-spacing: 2px;
+  margin: 0 5px;
+  img {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 30px;
+    @media screen and (max-width: 500px) {
+      padding: 0 5px;
+    }
   }
-  .carousel-container {
-    display: flex;
-    justify-content: center;
-    max-height: 500px;
+  .sub-hr {
+    max-width: 200px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .project-description {
+    max-width: 500px;
+    margin: auto;
   }
 }

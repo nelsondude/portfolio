@@ -13,19 +13,21 @@ const portfolio = () => {
       link: 'chess.alexnelson.me',
       description: `As a personal project, I created SayNPlay to play real-time
                     3D chess with other players. There is a chess AI you can play as well`,
-      images: ['chess1.png']
+      image: 'chess1.png'
     },
     {
-      header: 'TipsyApp',
+      header: 'Tipsyapp',
       link: 'www.tipsyapp.co',
-      description: 'Here is a description',
-      images: ['tipsy1.png', 'tipsy2.png']
+      description: `Tipsyapp parses and stores all of the “Tipsy Bartender” cocktail
+                    recipes to make it easier to navigate his 1000+ recipes.`,
+      image: 'tipsy1.png'
     },
     {
-      header: 'Header',
-      link: 'www.google.com',
-      description: 'Here is a description',
-      images: ['img 1', 'img 2']
+      header: 'BamSEC',
+      link: 'www.bamsec.com',
+      description: `In the summer of 2018, I interned at BamSEC, which is a 
+                    financial research tool for SEC filings posted on SEC.gov`,
+      image: 'bamsec1.png'
     }
   ];
 

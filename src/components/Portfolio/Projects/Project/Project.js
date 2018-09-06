@@ -1,7 +1,7 @@
 import React from 'react';
 import './Project.css';
 import Header from "components/Header/Header";
-import Carousel from 'nuka-carousel';
+import {Buffer} from "components";
 
 
 const project = (props) => {
@@ -10,16 +10,11 @@ const project = (props) => {
     <div className={'Project'}>
       <Header fontSize={'40px'} msg={props.header}/>
       <p><a href={`http://${props.link}`} target="_blank">{props.link}</a></p>
+      <hr className={'sub-hr'}/>
+      <p className={'text-muted project-description'}>{props.description}</p>
+      <img src={`/images/${props.image}`} alt=""/>
+      <Buffer height={'50px'}/>
       <hr/>
-      <p>{props.description}</p>
-      <div className={'carousel-container'}>
-        <Carousel width={'50%'}>
-          {props.images.map((image, i) => (
-            <img src={`/images/${image}`} alt=""/>
-          ))}
-        </Carousel>
-      </div>
-
     </div>
   )
 };
