@@ -1,5 +1,6 @@
 $breakpoint: 600px;
 $height: 160px;
+$brand-rotate: 30deg;
 
 .Navbar {
   height: $height;
@@ -20,7 +21,10 @@ $height: 160px;
     img {
       border-radius: 100%;
       height: $height * 3 / 4;
-      transition: all 1s;
+      transition: all .3s;
+      &:hover {
+        transform: rotate($brand-rotate);
+      }
     }
   }
 
@@ -76,7 +80,7 @@ $height: 160px;
   background: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   transition: background 1s;
   img {
-    transform: rotate(45deg);
+    transform: rotate($brand-rotate);
   }
 }
 
