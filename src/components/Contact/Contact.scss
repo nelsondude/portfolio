@@ -1,7 +1,9 @@
+@import 'styles/colors.scss';
+
 .Contact {
   text-align: center;
   height: 400px;
-  background-color: purple;
+  background-color: $main-color;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
