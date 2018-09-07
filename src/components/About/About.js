@@ -15,7 +15,7 @@ const about = () => {
         <br/>
         <p>
           Currently a Senior in Information Systems at Carnegie Mellon University with an
-          expected graduation of June 2019, I’m also aSoftware Engineer with 2+ years of
+          expected graduation of June 2019, I’m also a Software Engineer with 2+ years of
           experience specializing in Full-Stack web development. <br/><br/>
 
           I’ve held Software Engineering internships with BamSEC, The Walt Disney Company,
@@ -26,7 +26,6 @@ const about = () => {
           friends and family.
         </p>
       </div>
-
     </div>
   )
 };
