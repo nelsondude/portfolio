@@ -25,6 +25,14 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && node server.js"
+    "deploy": "node server.js",
+    "postinstall": "per-env",
+    "postinstall:production": "npm run build",
+    "postinstall:development": "echo Dont build since in development"
+  },
+  "engines": {
+    "node": "8.11.4",
+    "npm": "5.5.1",
+    "yarn": "1.9.4"
   }
 }
