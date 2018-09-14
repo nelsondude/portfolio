@@ -8,15 +8,8 @@ import profile from 'assets/profile_clean.png';
 
 export default class Navbar extends Component {
   state = {
-    collapse: true,
     navClasses: ['Navbar'],
     offsetTop: 0
-  };
-
-  updateCollapse = () => {
-    if (window.innerWidth > 600 && !this.state.collapse) {
-      this.setState({collapse: true})
-    }
   };
 
   handleScroll = () => {
@@ -31,19 +24,16 @@ export default class Navbar extends Component {
   };
 
   componentDidMount = () => {
-    window.addEventListener("resize", this.updateCollapse);
     window.addEventListener("scroll", this.handleScroll);
     this.setState({offsetTop: ReactDOM.findDOMNode(this).offsetTop});
   };
 
   componentWillUnmount = () => {
-    window.removeEventListener("resize", this.updateCollapse);
     window.removeEventListener("scroll", this.handleScroll);
   };
 
 
   handleGoToSection = (section_name) => {
-    this.setState({collapse: true});
     scroller.scrollTo(section_name, {
       duration: () => {return 500;},
       delay: 100,
@@ -54,10 +44,6 @@ export default class Navbar extends Component {
 
   render() {
     let navClasses = [...this.state.navClasses];
-    // let height = '52px';
-    // if (!this.state.collapse) {
-    //   height = `${this.props.links.length * 52}px`;
-    // }
 
     return (
       <nav className={navClasses.join(' ')}>
@@ -72,11 +58,6 @@ export default class Navbar extends Component {
               </li>
             )
           })}
-          <li id={'toggle'}>
-            <a className={'icon'} onClick={() => this.setState({collapse: !this.state.collapse})}>
-              <i className={"fa fa-bars"}/>
-            </a>
-          </li>
         </ul>
       </nav>
     )

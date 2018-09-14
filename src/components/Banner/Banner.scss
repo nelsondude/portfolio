@@ -10,5 +10,15 @@
   .banner-title {
     letter-spacing: 3px;
     font-size: 100px;
+    @media screen and (max-width: 470px) {
+      font-size: 80px;
+    }
   }
+  @media screen and (max-width: 470px) {
+    h3 {
+      padding: 0 10px;
+      font-size: 1.5rem;
+    }
+  }
+
 }

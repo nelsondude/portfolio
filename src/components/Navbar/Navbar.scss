@@ -1,6 +1,7 @@
+$breakpoint3: 450px;
 $breakpoint2: 600px;
 $breakpoint1: 800px;
-$height: 130px;
+$height: 100px;
 $short-height: 90px;
 $brand-rotate: 30deg;
 $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
@@ -9,17 +10,12 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
 
 .Navbar {
   height: $height;
-  overflow: hidden;
   transition: all .3s;
   padding: 0 60px;
   bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
-
-  .icon {
-    display: none;
-  }
 
   .home-brand {
     float: left;
@@ -41,7 +37,7 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   }
 
   li {
-    transition: all .2s;
+    transition: all .3s;
     line-height: $height;
     float: right;
     font-size: 28px;
@@ -55,8 +51,8 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   }
 
   @media screen and (max-width: $breakpoint1) {
-    li {
-      font-size: 20px;
+    .link {
+      font-size: 24px;
     }
     .home-brand img {
       height: $height / 2;
@@ -64,26 +60,13 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   }
 
   @media screen and (max-width: $breakpoint2) {
-    top: 0;
-    bottom: unset;
-    padding: 0 30px;
-    background: transparent !important;
-    height: $short-height;
-    position: fixed;
-    li {
-      line-height: $short-height;
-    }
+    padding: 0 20px;
     .link {
-      display: none;
+      font-size: 20px;
+      padding: 0 8px;
     }
-    #toggle {
-      float: right;
-      .icon {
-        display: block
-      }
-    }
-    &.navcollapse {
-      height: 104px;
+    .home-brand img {
+      height: 55px;
     }
   }
 }
@@ -91,13 +74,9 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1;
   background: $gradient;
   transition: background 1s;
-  //img {
-  //  transform: rotate($brand-rotate);
-  //}
 }
 
 // Affects content class in the Home Container
