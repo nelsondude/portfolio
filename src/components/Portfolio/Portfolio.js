@@ -9,9 +9,9 @@ import Projects from "./Projects/Projects";
 const portfolio = () => {
   const projects = [
     {
-      header: 'SayNPlay',
+      header: '3CHESS',
       link: 'chess.alexnelson.me',
-      description: `As a personal project, I created SayNPlay to play real-time
+      description: `As a personal project, I created 3CHESS to play real-time
                     3D chess with other players. It includes a chess AI developed with 
                     the Minimax algorithm in Python.`,
       image: 'chess1.png'
