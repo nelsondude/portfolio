@@ -1,3 +1,5 @@
+@import 'styles/colors.scss';
+
 $breakpoint3: 450px;
 $breakpoint2: 600px;
 $breakpoint1: 800px;
@@ -71,12 +73,43 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   }
 }
 
+.source-button {
+  display: block;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+  }
+  &:focus {
+    outline: 0;
+  }
+  transition: all .2s;
+  border: 2px solid white;
+  color: white;
+  background: $main-color;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 10px;
+  right: -50px;
+  transform: translateX(100%);
+  padding: 10px 20px;
+  font-size: 10px;
+  margin: 0;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   z-index: 1;
   background: $gradient;
   transition: background 1s;
+  .source-button {
+    right: 10px;
+    transform: translateX(0);
+  }
 }
 
 // Affects content class in the Home Container
