@@ -59,7 +59,7 @@ export default class Navbar extends Component {
             )
           })}
         </ul>
-        <a href="https://github.com/nelsondude/portfolio" target="_blank" className="source-button">source code</a>
+        <a href="https://github.com/nelsondude/portfolio" rel="noopener noreferrer" target="_blank" className="source-button">source code</a>
       </nav>
     )
   }
