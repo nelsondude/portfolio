@@ -3,7 +3,10 @@ body {
   padding: 0;
   font-family: 'Dosis', sans-serif !important;
   color: white;
-  background: url("~assets/clouds.jpg") no-repeat fixed right top;
+  background-position-x: 70%;
+  background-attachment: fixed;
+  background-image: url("~assets/clouds.jpg");
+  background-size: cover;
 }
 
 p {
