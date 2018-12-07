@@ -18,7 +18,7 @@ const portfolio = () => {
     },
     {
       header: 'Tipsyapp',
-      link: 'www.tipsyapp.co',
+      link: 'tipsy.alexnelson.me',
       description: `Tipsyapp parses and stores all of the “Tipsy Bartender” cocktail
                     recipes to make it easier to navigate his 1000+ recipes. Input the 
                     bar ingredients you have at home to see what drinks you can make of his.`,
