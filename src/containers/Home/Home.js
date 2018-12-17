@@ -13,6 +13,7 @@ class Home extends Component {
   render() {
     return (
       <div className={'Home'}>
+        <div className={'background'}></div>
         <Element name="home">
           <Banner/>
         </Element>
