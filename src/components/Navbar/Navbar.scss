@@ -50,6 +50,24 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   }
   .link {
     padding: 0 16px;
+    position: relative;
+    transition: all 1s;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 4px;
+      background: white;
+      transform: translateY(-20px);
+      transition: all .2s;
+      margin: auto;
+      border-radius: 10px;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
   }
 
   @media screen and (max-width: $breakpoint1) {
@@ -104,11 +122,29 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   position: fixed;
   top: 0;
   z-index: 1;
-  background: $gradient;
-  transition: background 1s;
   .source-button {
     right: 10px;
     transform: translateX(0);
+  }
+  &:before {
+    z-index: -1;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-image: $gradient;
+    animation: .3s fade-opacity forwards alternate;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes fade-opacity {
+  to {
+    opacity: 1;
   }
 }
 
