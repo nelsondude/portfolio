@@ -23,3 +23,5 @@ yarn-error.log*
 .env
 src/**/*.css
 build/
+
+.firebase
