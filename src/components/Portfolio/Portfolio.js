@@ -37,8 +37,6 @@ const portfolio = () => {
 
   return (
     <div className={'Portfolio'}>
-      <Header fontSize={'50px'} msg={'PORTFOLIO'}/>
-      <p>Below, you can see some of the projects I've been working on lately</p>
       <Projects projects={projects}/>
     </div>
   )
