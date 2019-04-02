@@ -4,6 +4,7 @@ import './Navbar.css';
 import {scroller} from "react-scroll";
 import {links} from "globals/constants";
 import profile from 'assets/profile_clean.png';
+import {BrowserView} from "react-device-detect";
 
 
 export default class Navbar extends Component {
@@ -59,7 +60,9 @@ export default class Navbar extends Component {
             )
           })}
         </ul>
-        <a href="https://github.com/nelsondude/portfolio" rel="noopener noreferrer" target="_blank" className="source-button">source code</a>
+        <BrowserView>
+          <a href="https://github.com/nelsondude/portfolio" rel="noopener noreferrer" target="_blank" className="source-button">source code</a>
+        </BrowserView>
       </nav>
     )
   }
