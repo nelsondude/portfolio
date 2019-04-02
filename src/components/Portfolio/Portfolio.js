@@ -1,9 +1,6 @@
 import React from 'react';
 import './Portfolio.css';
-import Header from "../Header/Header";
 import Projects from "./Projects/Projects";
-
-
 
 
 const portfolio = () => {

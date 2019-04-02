@@ -1,6 +1,6 @@
 import React from 'react';
-import collage from 'assets/collage.jpg';
 import './About.css';
+import {isMobile} from "react-device-detect";
 
 
 class About extends React.Component {
@@ -24,7 +24,7 @@ class About extends React.Component {
     return (
       <div className={'About'} style={{height: this.state.height + 'px'}}>
         {/*<img src={collage} alt="" style={{height: 'auto'}}/>*/}
-        <div className={'mask'}/>
+        <div className={'mask'} style={isMobile ? {opacity: 1, background: '#380066'} : {}}/>
         <div className={'about-content'} id={'aboutcontent'}>
           <h1>About Me</h1>
           <br/>
