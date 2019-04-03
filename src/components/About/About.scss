@@ -4,10 +4,6 @@
   position: relative;
   text-align: center;
   overflow: hidden;
-  img {
-    height: auto;
-    width: 100%;
-  }
   .about-content {
     position: absolute;
     left: 0;
@@ -29,6 +25,10 @@
     height: 100%;
     background: $main-color;
     opacity: 0.5;
+  }
+  img {
+    height: auto;
+    width: 100%;
   }
   h1 {
     text-transform: uppercase;

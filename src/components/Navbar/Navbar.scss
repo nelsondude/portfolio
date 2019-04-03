@@ -8,11 +8,6 @@ $short-height: 90px;
 $brand-rotate: 30deg;
 $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
 
-.Navbar.sticky:before {
-  opacity: 1;
-
-}
-
 
 .Navbar {
   height: $height;
@@ -32,8 +27,14 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
     position: absolute;
     height: 100%;
     background-image: $gradient;
-    transition: .2s opacity;
+    transition: .2s all;
     opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  &.sticky:before {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .home-brand {
@@ -48,23 +49,6 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
     }
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
-  li {
-    transition: all .3s;
-    line-height: $height;
-    float: right;
-    font-size: 28px;
-    text-transform: uppercase;
-    &:hover {
-      cursor: pointer;
-    }
-  }
   .link {
     padding: 0 16px;
     position: relative;
@@ -84,6 +68,24 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
       &:hover:after {
         width: 100%;
       }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    transition: all .3s;
+    line-height: $height;
+    float: right;
+    font-size: 28px;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -110,15 +112,6 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
 
 .source-button {
   display: block;
-  &:hover {
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 13px;
-    color: white;
-  }
-  &:focus {
-    outline: 0;
-  }
   transition: all .2s;
   border: 2px solid white;
   color: white;
@@ -133,6 +126,15 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   padding: 10px 20px;
   font-size: 10px;
   margin: 0;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+  }
+  &:focus {
+    outline: 0;
+  }
 }
 
 .sticky {
@@ -143,9 +145,7 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
     right: 10px;
     transform: translateX(0);
   }
-}
-
-// Affects content class in the Home Container
-.sticky + .content {
-  padding-top: 52px;
+  + .content {   // Affects content class in the Home Container
+    padding-top: 52px;
+  }
 }
