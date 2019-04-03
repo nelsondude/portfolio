@@ -8,6 +8,10 @@ $short-height: 90px;
 $brand-rotate: 30deg;
 $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
 
+.Navbar.sticky:before {
+  opacity: 1;
+
+}
 
 
 .Navbar {
@@ -18,6 +22,19 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   left: 0;
   position: absolute;
   right: 0;
+
+  &:before {
+    z-index: -1;
+    left: 0;
+    display: block;
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-image: $gradient;
+    transition: .2s opacity;
+    opacity: 0;
+  }
 
   .home-brand {
     float: left;
@@ -63,8 +80,8 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
       margin: auto;
       border-radius: 10px;
     }
-    &:hover {
-      &:after {
+    @media (hover:hover) {
+      &:hover:after {
         width: 100%;
       }
     }
@@ -125,26 +142,6 @@ $gradient: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.5), transparent);
   .source-button {
     right: 10px;
     transform: translateX(0);
-  }
-  &:before {
-    z-index: -1;
-    left: 0;
-    display: block;
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    background-image: $gradient;
-    animation: .3s fade-opacity forwards alternate;
-    opacity: 0;
-  }
-}
-
-
-
-@keyframes fade-opacity {
-  to {
-    opacity: 1;
   }
 }
 
