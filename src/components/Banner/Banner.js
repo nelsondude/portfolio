@@ -4,6 +4,7 @@ import './Banner.css';
 import Navbar from "../Navbar/Navbar";
 import SocialIcons from "../SocialIcons/SocialIcons";
 import {ReactComponent as Signature} from './signature.svg';
+import {BrowserView} from "react-device-detect";
 
 
 class Banner extends React.Component {
@@ -18,6 +19,9 @@ class Banner extends React.Component {
     return (
       <div className={'Banner'}>
         <div className="banner-content">
+          <BrowserView>
+            <canvas id="canvas">Canvas is not supported in your browser</canvas>
+          </BrowserView>
           <Signature style={{padding: "5px"}} onClick={this.resetAnimation} id={"animated"}/>
           <Buffer height={'40px'}/>
           <SocialIcons />

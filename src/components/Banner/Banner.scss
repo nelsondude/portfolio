@@ -30,6 +30,12 @@
   #animated:hover {
     cursor: pointer;
   }
+  #canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
 
   @media screen and (max-width: 470px) {
     h3 {
