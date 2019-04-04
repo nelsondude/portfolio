@@ -348,6 +348,7 @@
       demo.updateCursor = function (x, y) {
         x /= demo.width;
         y /= demo.height;
+        y = Math.min(y, 0.6);
         var y_inverse = (1 - y);
 
         demo.drop_delay = y_inverse * y_inverse * y_inverse * 100 + 2;
