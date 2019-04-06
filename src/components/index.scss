@@ -1,9 +1,11 @@
 .Button {
-  &:hover {
-    cursor: pointer;
-    border-color: purple;
-    background-color: white;
-    color: purple;
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      border-color: purple;
+      background-color: white;
+      color: purple;
+    }
   }
   &:focus {
     outline: 0;

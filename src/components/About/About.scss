@@ -4,6 +4,7 @@
   position: relative;
   text-align: center;
   overflow: hidden;
+  background: #380066;
   .about-content {
     position: absolute;
     left: 0;
@@ -18,13 +19,8 @@
       padding: 0 8%;
     }
   }
-  .mask {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: $main-color;
-    opacity: 0.5;
+  &.mask {
+    background: $main-color-faded;
   }
   img {
     height: auto;
