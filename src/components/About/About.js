@@ -5,24 +5,9 @@ import {isMobile} from "react-device-detect";
 
 class About extends React.Component {
 
-  state = {
-    height: 600
-  };
-
-  handleResize = () => {
-    let obj = document.getElementById('aboutcontent');
-    const rect = obj.getBoundingClientRect();
-    this.setState({height: rect.bottom - rect.top + 100})
-  }
-
-  componentDidMount() {
-    this.handleResize();
-    window.addEventListener('resize', this.handleResize.bind(this));
-  }
-
   render() {
     return (
-      <div className={['About', isMobile ? null : 'mask'].join(' ')} style={{height: this.state.height + 'px'}}>
+      <div className={['About', isMobile ? null : 'mask'].join(' ')}>
         <div className={'about-content'} id={'aboutcontent'}>
           <h1>About Me</h1>
           <br/>
